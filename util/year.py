@@ -6,7 +6,7 @@ import model
 from db import session
 
 fake_year_shim_enabled = False
-fake_year_shim_id = 0
+fake_year_shim_id = 5  # 2020/21
 
 def years():
     return session.query(model.Year).all()
