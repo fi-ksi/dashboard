@@ -29,9 +29,10 @@ sudo apt install -y python3.6 python3.6-dev python3.6-venv libmysqlclient-dev vi
  1. Clone this repository.
  2. Install virtualenv & packages into `ksi-py3-venv` directory.
     ```
-    virtualenv -p python3.6 ksi-py3-venv
-    source ksi-py3-venv/bin/activate
-    pip3 install -r requirements.txt
+virtualenv -p python3.6 ksi-py3-venv
+source ksi-py3-venv/bin/activate
+python -m pip install -r requirements.txt
+python -m pip install hide-code==0.5.5  # This fails if it's part of requirements.txt
     ```
  3. Enter db url into `config.py` file. Format:
     ```
