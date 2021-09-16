@@ -1,7 +1,5 @@
 # KSI dashboard
 
-<https://ksi.fi.muni.cz/monitor>
-
 ## Docker version
 
 ```
