@@ -1,12 +1,14 @@
 version: '2'
 
 services:
-  ember:
+  dashboardbuild:
     build: .
     volumes:
-      - ./:/myapp
+      # - ./:/myapp
+      - ./build:/myapp/docker_build
     ports:
       - "8080:8080"
+    entrypoint: /myapp/build_in_docker.sh
 
     # If you want manual bash, do the following.
     # 1. Uncomment the following line:
