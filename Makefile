@@ -14,12 +14,12 @@ include .env
 ksi_build/%.html: notebooks/%.ipynb
 	echo $(DB_URI_KSI) > db_uri.secret
 	ksi-py3-venv/bin/python3 export_monitoring_notebook $< $@
-	rm db_uri.secret
+	rm db_uri.secret || true
 
 naskoc_build/%.html: notebooks/%.ipynb
 	echo $(DB_URI_NASKOC) > db_uri.secret
 	ksi-py3-venv/bin/python3 export_monitoring_notebook $< $@
-	rm db_uri.secret
+	rm db_uri.secret || true
 
 docker_build/%.html: notebooks/%.ipynb
 	python3 export_monitoring_notebook $< $@
