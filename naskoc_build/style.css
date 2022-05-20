@@ -1,0 +1,22 @@
+body {
+    font-family: sans-serif;
+    max-width: 800px;
+    min-width: 200px;
+    margin: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+a:hover {
+ text-decoration: none;
+ color: red;
+}
+
+#logo {
+    float:right;
+}
+
+strong {
+    font-weight: bold;
+    text-decoration: underline;
+}

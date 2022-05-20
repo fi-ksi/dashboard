@@ -5,10 +5,10 @@ services:
     build: .
     volumes:
       # - ./:/myapp
-      - ./build:/myapp/docker_build
+      - ./docker_build:/myapp/docker_build
     ports:
       - "8080:8080"
-    entrypoint: /myapp/build_in_docker.sh
+    # entrypoint: /myapp/build_in_docker.sh
 
     # If you want manual bash, do the following.
     # 1. Uncomment the following line:

@@ -4,4 +4,12 @@ __pycache__
 config.py
 ksi-py3-venv
 .ipynb_checkpoints
-build
+
+ksi_build/*.html
+naskoc_build/*.html
+docker_build/*.html
+
+.env
+
+!**/.gitkeep
+!**/index.html
