@@ -10,6 +10,7 @@ naskoc_build/*.html
 docker_build/*.html
 
 .env
+*.secret
 
 !**/.gitkeep
 !**/index.html
