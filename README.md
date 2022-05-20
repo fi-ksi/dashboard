@@ -26,16 +26,19 @@ sudo apt install -y python3.6 python3.6-dev python3.6-venv libmysqlclient-dev vi
 
  1. Clone this repository.
  2. Install virtualenv & packages into `ksi-py3-venv` directory.
-    ```
+
+```
 python3.9 -m venv ksi-py3-venv
 source ksi-py3-venv/bin/activate
 python -m pip install wheel
 python -m pip install -r requirements.txt
-    ```
+```
+
  3. Enter db url into `config.py` file. Format:
-    ```
-    SQL_ALCHEMY_URI = 'mysql://username:password@server/db_name?charset=utf8mb4'
-    ```
+
+```
+SQL_ALCHEMY_URI = 'mysql://username:password@server/db_name?charset=utf8mb4'
+```
 
 ## Serve static files
 
