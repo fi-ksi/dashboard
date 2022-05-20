@@ -32,8 +32,9 @@ def run_notebook(notebook):
 
 def export_notebook_to_html(notebook, output_path):
     html_exporter = HTMLExporter()
-    html_exporter.template_file='ksi-py3-venv/lib/python3.7/site-packages/'\
-        'jupyter_contrib_nbextensions/templates/nbextensions.tpl'
+    #html_exporter.template_file='ksi-py3-venv/lib/python3.7/site-packages/'\
+    #    'jupyter_contrib_nbextensions/templates/nbextensions.tpl'
+    html_exporter.template_file='util/nbextensions.tpl'
     html, _resources = html_exporter.from_notebook_node(notebook)
     with open(output_path, 'wt') as outfile:
         outfile.write(html)
