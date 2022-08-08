@@ -6,7 +6,7 @@ import model
 from db import session
 
 fake_year_shim_enabled = False
-fake_year_shim_id = 5  # 2020/21
+fake_year_shim_id = 6  # 6 = 2021/22
 
 def years():
     return session.query(model.Year).all()
@@ -25,4 +25,4 @@ if fake_year_shim_enabled:
     try:
         year = years()[fake_year_shim_id]
     except:
-        raise "Year probably out of range"
+        raise Exception("Year probably out of range")
