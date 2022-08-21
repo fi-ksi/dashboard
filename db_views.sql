@@ -13,7 +13,7 @@ CREATE OR REPLACE VIEW modules_with_context AS
 CREATE OR REPLACE VIEW evaluations_with_context AS
     SELECT
         users.id as user, users.sex, users.role, users.enabled, users.registered,
-        evaluations.id as evaluationsID, evaluations.module as module, evaluations.evaluator, evaluations.points, evaluations.ok, evaluations.cheat, evaluations.full_report, evaluations.time, 
+        evaluations.id as evaluationID, evaluations.module as module, evaluations.evaluator, evaluations.points, evaluations.ok, evaluations.cheat, evaluations.full_report, evaluations.time, 
         modules_with_context.*
     FROM `users`
     INNER JOIN evaluations on evaluations.user = users.id
