@@ -94,7 +94,7 @@ CREATE OR REPLACE VIEW users_and_points_and_max AS
     JOIN years_max_points ON years_max_points.year = points_per_year_participants.year
 ;
 
-CREATE VIEW number_of_users_failing_on_module AS
+CREATE OR REPLACE VIEW number_of_users_failing_on_module AS
 SELECT year, module, module_name, task_name, count(user) as failing_users
 FROM `users_failing_on_modules`
 GROUP BY module
