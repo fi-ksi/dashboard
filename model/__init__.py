@@ -21,6 +21,7 @@ from model.mail_easteregg import MailEasterEgg
 from model.feedback_recipients import FeedbackRecipient
 from model.programming import CodeExecution
 from model.evaluation import Evaluation
+from model.evaluation_view import EvaluationParticipantsWithContext
 from model.submitted import SubmittedFile, SubmittedCode
 from model.active_orgs import ActiveOrg
 from model.feedback import Feedback
