@@ -5,9 +5,9 @@ config.py
 ksi-py3-venv
 .ipynb_checkpoints
 
-ksi_build/*.html
-naskoc_build/*.html
-docker_build/*.html
+build/*
+*_build/*.html
+*_build/archived/*
 
 .env
 *.secret
