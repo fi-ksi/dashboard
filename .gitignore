@@ -5,6 +5,8 @@ config.py
 ksi-py3-venv
 .ipynb_checkpoints
 
+.idea
+
 build/*
 *_build/*.html
 *_build/archived/*
