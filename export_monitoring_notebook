@@ -30,6 +30,12 @@ def run_notebook(notebook):
     ep.preprocess(notebook, {'metadata': {'path': '.'}})
 
 
+def remove_stderr(notebook):
+    for cell in notebook.cells:
+        if cell.cell_type == 'code':
+            cell.outputs = [output for output in cell.outputs if
+                            output.output_type != 'stream' or output.name != 'stderr']
+
 def export_notebook_to_html(notebook, output_path):
     html_exporter = HTMLExporter()
     #html_exporter.template_file='ksi-py3-venv/lib/python3.7/site-packages/'\
@@ -50,4 +56,5 @@ if __name__ == '__main__':
         notebook = nbformat.read(infile, as_version=nbformat.NO_CONVERT)
     notebook['metadata']['hide_input'] = True
     run_notebook(notebook)
+    remove_stderr(notebook)
     export_notebook_to_html(notebook, output_path)
