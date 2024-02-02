@@ -1,4 +1,6 @@
 #!/bin/bash
+set -xuo pipefail
+cd "$(dirname "$(realpath "$0")")"
 
 git fetch origin
 git reset --hard origin/master
