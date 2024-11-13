@@ -1,15 +1,11 @@
 # This is aimed at Python 3.9
-
-# requires to run first: python3 -m pip install wheel setuptools
-
-jinja2<3.1
+jinja2==3.0.3
 jupyter-client==6.1.12
-
-jupyter
-matplotlib
-sqlalchemy
-pandas
-seaborn
-numpy
-mysqlclient
-hide-code
+jupyter==1.0.0
+matplotlib==3.5.2
+sqlalchemy==1.4.36
+pandas==1.4.2
+seaborn==0.11.2
+numpy==1.22.3
+hide-code==0.6.0
+PyMySQL==1.1.1

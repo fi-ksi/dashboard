@@ -4,5 +4,4 @@ set -e
 
 cd /myapp
 
-make clean
-make docker_all
+make all

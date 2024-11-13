@@ -1,17 +1,16 @@
 version: '2'
 
 services:
-  dashboardbuild:
-    build: .
+  ksi-dashboard:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+    container_name: ksi-dashboard
+    image: fi0ksi/ksi-dashboard
     volumes:
-      # - ./:/myapp
-      - ./docker_build:/myapp/docker_build
-    ports:
-      - "8080:8080"
-    # entrypoint: /myapp/build_in_docker.sh
-
-    # If you want manual bash, do the following.
-    # 1. Uncomment the following line:
-    # entrypoint: tail -f /dev/null # Uncomment this if you want to start bash manually after the 
-    # 2. Do `docker-compose up -d --build`
-    # 3. After it finishes, run `docker exec -it web-frontend_ember_1 /bin/bash`
+      - ./build:/myapp/build
+      - ./config.py:/myapp/config.py:ro
+    # ports:
+      # - "127.0.0.1:8080:8080"
+    entrypoint: /bin/bash
+    command: /myapp/docker/build_in_docker.sh
