@@ -4,22 +4,13 @@
 
 ```
 git clone https://github.com/fi-ksi/dashboard.git
-# edit config.py, see instruction from the non docker version
+# edit config.py to set database secret
 docker-compose up --build
 ```
 
+By default, the docker is set to build static HTML files. If you want to use the Jupyter development server instead, comment the entrypoint and command in `docker-compose.yaml` and uncomment the port assigments.
+
 ## Non Docker version
-
-### Software needed
-
- * Python 3.6 (including dev package)
- * virtualenv
- * packages from `requirements.txt` (building of the packages requires gcc and libmysqlclient-dev)
- * make
- 
-```
-sudo apt install -y python3.6 python3.6-dev python3.6-venv libmysqlclient-dev virtualenv gcc make
-```
 
 
 ## Installation
