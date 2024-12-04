@@ -6,6 +6,6 @@ build/%.html: notebooks/%.ipynb
 	python3 export_monitoring_notebook $< $@
 
 clean:
-	rm -rf $(DOCKER_TARGETS)
+	rm -rf $(TARGETS)
 
-.PHONY: all clean
+.PHONY: clean all
